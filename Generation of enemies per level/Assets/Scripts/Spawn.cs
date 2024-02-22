@@ -7,10 +7,8 @@ using UnityEngine.Events;
 
 public class Spawn : MonoBehaviour
 {
-    //[SerializeField] private Transform _target;
     [SerializeField] private Transform[] _spawns;
     [SerializeField] private MoveForward[] _enemy;
-    [SerializeField] private MoverPursuer _target;
 
     private void Start()
     {

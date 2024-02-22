@@ -63,7 +63,6 @@
     <Compile Include="Assets\Scripts\Spawn.cs" />
     <Compile Include="Assets\Scripts\MoverTarget.cs" />
     <Compile Include="Assets\Scripts\MoveForward.cs" />
-    <Compile Include="Assets\Scripts\MoverPursuer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

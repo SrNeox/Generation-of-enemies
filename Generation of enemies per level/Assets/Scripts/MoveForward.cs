@@ -5,10 +5,10 @@ using UnityEngine;
 public class MoveForward : MonoBehaviour
 {
     [SerializeField] private Vector3 _direction;
-    [SerializeField] float _speed;
+    [SerializeField] private float _speed;
 
     private void Update()
     {
-        transform.Translate(_direction * _speed);
+        transform.Translate(_direction * _speed * Time.deltaTime);
     }
 }
