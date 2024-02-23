@@ -14,7 +14,7 @@ public class MoverTarget : MonoBehaviour
 
     private int _currentPoint = 0;
     
-    void Update()
+    private void Update()
     {
         JumpToPoints();
     }

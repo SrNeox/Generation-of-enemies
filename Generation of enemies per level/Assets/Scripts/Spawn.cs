@@ -8,25 +8,30 @@ using UnityEngine.Events;
 public class Spawn : MonoBehaviour
 {
     [SerializeField] private Transform[] _spawns;
-    [SerializeField] private MoveForward[] _enemy;
+    [SerializeField] private ForwardMove[] _enemy;
+
+    private int _timeDelay = 2;
 
     private void Start()
     {
-        StartCoroutine(CreateEnemy(2));
+        StartCoroutine(CreateEnemy(_timeDelay));
     }
 
     private IEnumerator CreateEnemy(int timeToDelay)
     {
         WaitForSeconds delay = new WaitForSeconds(timeToDelay);
 
+        int minSpawnNumber = 0;
+        int maxSpawnNumber = 2;
+
         while (true)
         {
-            int numberArray = Random.Range(0, 2);
+            int numberArray = Random.Range(minSpawnNumber, maxSpawnNumber);
 
             for (int i = 0; i < _spawns.Length; i++)
             {
                 Transform spawn = _spawns[i];
-                MoveForward enemy = _enemy[i];
+                ForwardMove enemy = _enemy[i];
 
                 if (i == numberArray)
                 {
