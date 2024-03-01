@@ -9,10 +9,10 @@ using UnityEngine.Events;
 public class Spawn : MonoBehaviour
 {
     [SerializeField] private Transform[] _pointSpawns;
-    [SerializeField] private EnemiesMover[] _enemies;
+    [SerializeField] private EnemiesMovement[] _enemies;
     [SerializeField] private Transform[] _targets;
 
-    private EnemiesMover _spawnedEnemy;
+    private EnemiesMovement _spawnedEnemy;
 
     private readonly int _timeDelay = 2;
 
@@ -36,13 +36,13 @@ public class Spawn : MonoBehaviour
             {
                 _spawnedEnemy = Instantiate(_enemies[numberSpawn]);
 
-                _spawnedEnemy._direction = _targets[numberSpawn];
+                _spawnedEnemy.TakeDirection(_targets[numberSpawn]);
             }
             else
             {
                 _spawnedEnemy = Instantiate(_enemies[numberSpawn]);
 
-                _spawnedEnemy._direction = _targets[numberSpawn];
+                _spawnedEnemy.TakeDirection(_targets[numberSpawn]);
             }
 
             yield return delay;
