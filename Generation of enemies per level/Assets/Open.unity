@@ -260,8 +260,9 @@ GameObject:
   - component: {fileID: 65470040}
   - component: {fileID: 65470039}
   - component: {fileID: 65470038}
+  - component: {fileID: 65470042}
   m_Layer: 0
-  m_Name: Spawner
+  m_Name: Spaw 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -353,6 +354,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 476611434}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &65470042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 65470037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa5fe455535baf4aa1295fcded411da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemy: {fileID: -288182507863254371, guid: 084df9a871087c548ad9808352be450b, type: 3}
+  _target: {fileID: 255880904}
 --- !u!1 &255880902
 GameObject:
   m_ObjectHideFlags: 0
@@ -524,15 +539,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 390864cc065c83d449a6846df7f4dd15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pointSpawns:
-  - {fileID: 65470041}
-  - {fileID: 2140364805}
-  _enemies:
-  - {fileID: -288182507863254371, guid: 084df9a871087c548ad9808352be450b, type: 3}
-  - {fileID: -6852275269084851566, guid: 268982ab194aa5e448138e8b21916c2e, type: 3}
-  _targets:
-  - {fileID: 255880903}
-  - {fileID: 44563071}
+  _spawns:
+  - {fileID: 65470042}
+  - {fileID: 2140364806}
 --- !u!1 &634820021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1124,8 +1133,9 @@ GameObject:
   - component: {fileID: 2140364804}
   - component: {fileID: 2140364803}
   - component: {fileID: 2140364802}
+  - component: {fileID: 2140364806}
   m_Layer: 0
-  m_Name: Spawner (2)
+  m_Name: Spaw 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1217,6 +1227,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 476611434}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2140364806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140364800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa5fe455535baf4aa1295fcded411da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _enemy: {fileID: -6852275269084851566, guid: 268982ab194aa5e448138e8b21916c2e, type: 3}
+  _target: {fileID: 44563072}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
