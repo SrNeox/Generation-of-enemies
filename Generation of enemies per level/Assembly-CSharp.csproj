@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Spawn.cs" />
     <Compile Include="Assets\Scripts\EnemiesMovement.cs" />
+    <Compile Include="Assets\Scripts\SpawnСontrol.cs" />
     <Compile Include="Assets\Scripts\TargetMovement.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -1,57 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Unity.VisualScripting;
-using UnityEngine.Events;
-
-
 
 public class Spawn : MonoBehaviour
 {
-    [SerializeField] private Transform[] _pointSpawns;
-    [SerializeField] private EnemiesMovement[] _enemies;
-    [SerializeField] private Transform[] _targets;
+    [SerializeField] private EnemiesMovement _enemy;
+    [SerializeField] private TargetMovement _target;
 
-    private EnemiesMovement _spawnedEnemy;
-
-    private readonly int _timeDelay = 2;
-
-    private void Start()
+    public void SummonEnemy()
     {
-        PositionEnemy();
-        StartCoroutine(CreateEnemy(_timeDelay));
-    }
+        EnemiesMovement enemy = Instantiate(_enemy);
 
-    private IEnumerator CreateEnemy(int timeToDelay)
-    {
-        WaitForSeconds delay = new WaitForSeconds(timeToDelay);
-
-        while (true)
-        {
-            int numberSpawn = Random.Range(0, _pointSpawns.Length);
-
-            int firstSpawn = 0;
-
-            if (numberSpawn == firstSpawn)
-            {
-                _spawnedEnemy = Instantiate(_enemies[numberSpawn]);
-
-                _spawnedEnemy.TakeDirection(_targets[numberSpawn]);
-            }
-            else
-            {
-                _spawnedEnemy = Instantiate(_enemies[numberSpawn]);
-
-                _spawnedEnemy.TakeDirection(_targets[numberSpawn]);
-            }
-
-            yield return delay;
-        }
-    }
-
-    private void PositionEnemy()
-    {
-        _enemies[0].transform.position = _pointSpawns[0].position;
-        _enemies[1].transform.position = _pointSpawns[1].position;
+        enemy.Target(_target);
     }
 }

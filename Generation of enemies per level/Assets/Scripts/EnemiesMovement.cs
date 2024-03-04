@@ -1,21 +1,23 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemiesMovement : MonoBehaviour
 {
     [SerializeField] private float _speed;
 
-    private Transform _direction;
+    private TargetMovement _target;
 
     private void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _direction.position, _speed * Time.deltaTime);
+        Move(_target);
     }
 
-    public void TakeDirection(Transform direction)
+    public void Target(TargetMovement target)
     {
-        _direction = direction;
+        _target = target;
+    }
+
+    private void Move(TargetMovement target)
+    {
+        transform.position = Vector3.MoveTowards(transform.position, _target.transform.position, _speed * Time.deltaTime);
     }
 }
