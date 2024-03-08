@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
         {
             int numberSpawn = Random.Range(0, _spawns.Length);
 
-            _spawns[numberSpawn].SummonEnemy();
+            _spawns[numberSpawn].Spawn();
 
             yield return delay;
         }

@@ -355,7 +355,7 @@
 "Assets/Scripts/EnemyMover.cs"
 "Assets/Scripts/Spawner.cs"
 "Assets/Scripts/SpawnPoint.cs"
-"Assets/Scripts/TargetMover.cs"
+"Assets/Scripts/Target.cs"
 -langversion:9.0
 
 /deterministic

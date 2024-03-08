@@ -3,12 +3,12 @@ using UnityEngine;
 public class SpawnPoint : MonoBehaviour
 {
     [SerializeField] private EnemyMover _enemy;
-    [SerializeField] private TargetMover _target;
+    [SerializeField] private Target _target;
 
-    public void SummonEnemy()
+    public void Spawn()
     {
         EnemyMover enemy = Instantiate(_enemy);
 
-        enemy.TakeTarget(_target);
+        enemy.SetTarget(_target);
     }
 }
